@@ -28,9 +28,11 @@ module.exports = {
         {
             test: /\.css$/, // Применять это правило только к CSS-файлам
             use: [
-                (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
-                'css-loader',
-                'postcss-loader'
+                isDev ? 'style-loader' : {
+                    loader: MiniCssExtractPlugin.loader, options: {
+                        publicPath: '../'
+                    } 
+                }, 'css-loader', 'postcss-loader'
             ]
         },
         {
