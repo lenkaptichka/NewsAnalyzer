@@ -1,0 +1,12 @@
+@import url(./_active/search-info__link_active.css);
+
+.search-info__link {
+  cursor: pointer;
+  text-decoration: none;
+  color: #B6BCBF;
+}
+
+.search-info__link:hover {
+  color: #1A1B22;
+  transition: color .3s ease;
+}

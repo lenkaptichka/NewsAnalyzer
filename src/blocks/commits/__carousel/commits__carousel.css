@@ -1,0 +1,20 @@
+.commits__carousel {
+  width: calc(100% + 104px *2);
+  margin-left: -104px;
+  position: relative;
+} 
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .commits__carousel {
+    width: calc(100% + 40px *2);
+    margin-left: -40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .commits__carousel {
+    width: 100%;
+    margin-left: 0px;
+  }
+}

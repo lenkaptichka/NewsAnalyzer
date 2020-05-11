@@ -1,0 +1,9 @@
+.scale__value_fourth-value {
+  width: calc(39% - 104px);
+}
+
+@media screen and (max-width: 767px) {
+  .scale__value_fourth-value {
+    width: calc(39% - 80px);   
+  }
+}

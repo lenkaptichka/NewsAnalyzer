@@ -1,0 +1,5 @@
+.header__link.header__link_white-theme:hover {
+  cursor: pointer;
+  color: #FFFFFF;
+  transition: color .3s ease;
+}

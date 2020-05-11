@@ -1,0 +1,9 @@
+.title_subheader {
+  margin: 0px;
+}
+
+@media screen and (max-width: 767px) {
+  .title_subheader {
+    margin: 0px 0px 16px;   
+  }
+}

@@ -1,0 +1,30 @@
+.footer__link {
+  margin-right: 40px;
+  color: #1A1B22;
+  text-decoration: none; 
+}
+
+.footer__link:last-of-type {
+  margin-right: 0px; 
+}
+
+.footer__link:hover {
+  cursor: pointer;
+  color: #B6BCBF;
+  transition: color .3s ease;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .footer__link {
+    margin-right: 25px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer__link {
+    margin: 0px 0px 24px;    
+  }
+  .footer__link:last-of-type {
+    margin-bottom: 0px;
+  }
+}

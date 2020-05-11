@@ -1,0 +1,9 @@
+.search__field {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-self: center;
+  width: 100%; 
+}
+

@@ -1,0 +1,22 @@
+.commits__content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .commits__content {
+    padding-right: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .commits__content {
+    padding: 16px;
+  }
+}

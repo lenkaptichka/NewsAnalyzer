@@ -1,0 +1,24 @@
+@import url(./_github/subheader__link_github.css);
+
+.subheader__link {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1B22;
+  margin: 0px;
+  text-decoration: none;
+}
+
+.subheader__link::after {
+  content: url(../../../images/arrow.svg);
+  margin-left: 10px;
+}
+
+.subheader__link:hover {
+  cursor: pointer;
+  opacity: .35;
+  transition: all .3s ease;
+}
+

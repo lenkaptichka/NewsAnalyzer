@@ -1,0 +1,18 @@
+
+@import url(../../vendor/fonts.css);
+@import url(./_search-subtitle/text_search-subtitle.css);
+@import url(./_about-author/text_about-author.css);
+@import url(./_no-result/text_no-result.css);
+@import url(./_client/text_client.css);
+@import url(./_search-info/text_search-info.css);
+@import url(./_numbers/text_numbers.css);
+@import url(./_preloader/text_preloader.css);
+
+.text {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1B22;
+}

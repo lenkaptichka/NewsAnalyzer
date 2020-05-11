@@ -1,0 +1,16 @@
+.commits__author-photo {
+  width: 18.2%;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .commits__author-photo {
+    width: 16%;
+  }
+}
+
+/* @media screen and (max-width: 767px) {
+  .commits__author-photo {
+    width: 100%;
+  }
+} */
