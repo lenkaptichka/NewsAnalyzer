@@ -1,9 +1,0 @@
-.scale__value_first-value {
-  width: calc(15% - 104px);
-}
-
-@media screen and (max-width: 767px) {
-  .scale__value_first-value {
-    width: calc(15% - 80px);   
-  }
-}
