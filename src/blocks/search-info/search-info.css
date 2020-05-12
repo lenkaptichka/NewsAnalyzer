@@ -1,0 +1,20 @@
+@import url(../../vendor/fonts.css);
+@import url(./__link/search-info__link.css);
+@import url(./__navigation/search-info__navigation.css);
+
+.search-info {
+
+  padding: 40px 104px 80px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .search-info {
+    padding: 32px 40px 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .search-info {
+    padding: 16px 16px 24px;   
+  }
+}

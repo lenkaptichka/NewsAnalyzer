@@ -1,0 +1,9 @@
+.scale__value_sixth-value {
+  width: calc(73% - 104px);
+}
+
+@media screen and (max-width: 767px) {
+  .scale__value_sixth-value {
+    width: calc(73% - 80px);   
+  }
+}

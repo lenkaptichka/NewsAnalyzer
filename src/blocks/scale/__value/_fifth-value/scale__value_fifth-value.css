@@ -1,0 +1,9 @@
+.scale__value_fifth-value {
+  width: calc(45% - 104px);
+}
+
+@media screen and (max-width: 767px) {
+  .scale__value_fifth-value {
+    width: calc(45% - 80px);   
+  }
+}

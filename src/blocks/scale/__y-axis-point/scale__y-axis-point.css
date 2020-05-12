@@ -1,0 +1,15 @@
+.scale__y-axis-point {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #1A1B22;
+  width: 104px;
+  margin: 0px;
+}
+
+@media screen and (max-width: 767px) {
+  .scale__y-axis-point {
+    width: 80px;   
+  }
+}

@@ -1,0 +1,9 @@
+.commits__personal-info {
+  margin-left: 16px;
+}
+
+@media screen and (max-width: 1023px) {
+  .commits__personal-info {
+    margin-left: 12px;
+  }
+}

@@ -1,0 +1,9 @@
+.technologies__picture {
+  width: 100%;
+}
+
+.technologies__picture:hover {
+  transform: scale(1.05, 1.05);
+  transition: transform .3s ease;
+
+}
