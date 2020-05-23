@@ -5,6 +5,7 @@
   border-radius: 16px;
   background-color: #FFFFFF;
   padding: 0px 24px 24px;
+  text-decoration: none;
 }
 
 .news__card-item:hover {

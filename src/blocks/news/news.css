@@ -9,7 +9,6 @@
 @import url(./_hidden/news_hidden.css);
 
 .news {
-  border: cadetblue 1px solid;
   display: flex;
   flex-direction: column;
   align-items: center;

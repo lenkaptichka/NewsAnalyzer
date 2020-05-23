@@ -5,8 +5,7 @@
 .header__link {
   color: #B6BCBF;
   text-decoration: none;
-  margin-right: 34px;
-  padding-bottom: 23px;
+  padding-bottom: 22px;
 }
 
 .header__link:hover {
@@ -17,7 +16,7 @@
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .header__link {
-    padding-bottom: 15px;
+    padding-bottom: 13px;
   }
 }
 
@@ -25,12 +24,7 @@
   .header__link {
     font-size: 16px;
     line-height: 24px;
-    margin-right: 11px;
-    padding-bottom: 13px;   
+    padding-bottom: 12px;   
   }
-}
-
-.header__link:last-of-type {
-  margin-right: 0px;
 }
 

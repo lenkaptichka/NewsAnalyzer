@@ -5,7 +5,14 @@
   font-size: 18px;
   color: #1A1B22;
   width: 104px;
-  margin: 0px;
+  margin: 0px 0px 56px;
+  height: 24px;
+  /* text-align: center; */
+}
+
+.scale__y-axis-point:last-of-type {
+  margin-bottom: 0px;
+
 }
 
 @media screen and (max-width: 767px) {

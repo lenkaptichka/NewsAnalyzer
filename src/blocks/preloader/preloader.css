@@ -3,7 +3,6 @@
 @import url(./_hidden/preloader_hidden.css);
 
 .preloader {
-  border: cadetblue 1px solid;
   padding: 80px 104px;
   background-color: #F5F6F7;
 }
