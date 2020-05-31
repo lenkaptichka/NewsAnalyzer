@@ -22,7 +22,11 @@
   transition: all .5s ease;
 }
 
-.search__input:invalid {
+.search__input:placeholder-shown:invalid:focus {
+  border: 1px solid #347EFF;
+}
+
+.search__input:invalid:focus {
   border-color: #F73C40;
   transition: all .5s ease;
 }

@@ -1,0 +1,22 @@
+.search__error {
+  position: absolute;
+  color: #F73C40;
+  font-size: 14px;
+  bottom: 81px;
+  left: calc(25px + 29%);
+  z-index: 2;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .search__error {
+    bottom: 49px;
+    left: calc(25px + 20%);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .search__error {
+    bottom: 102px;
+    left: calc(16px + 5%);
+  }
+}

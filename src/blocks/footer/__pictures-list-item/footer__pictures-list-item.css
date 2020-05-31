@@ -1,0 +1,8 @@
+.footer__pictures-list-item {
+  list-style-type: none;
+  margin-right: 28px;
+}
+
+.footer__pictures-list-item:last-of-type {
+  margin-right: 0px;
+}

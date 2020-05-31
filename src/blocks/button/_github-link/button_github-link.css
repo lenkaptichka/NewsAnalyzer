@@ -16,7 +16,8 @@
 }
 
 .button_github-link:hover {
-  box-shadow: 0 8px 10px #CED2D5; 
+  box-shadow: 0 8px 10px #CED2D5;
+  opacity: .9;
   transition: all .3s ease;
   cursor: pointer;
 }
