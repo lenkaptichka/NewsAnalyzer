@@ -1,4 +1,4 @@
-import {numberOfArticles, scaleValue, yAxisScale, searchTitle, scalevalueItems} from "../constants/constants";
+import {numberOfArticles, scaleValues, yAxisScales, searchTitle, scalevalueItems} from "../constants/constants";
 
 export default class Statistics {
   constructor(storageState, dateConverter) {
@@ -35,7 +35,7 @@ export default class Statistics {
   }
 
   addDataToYScale() {
-    yAxisScale.forEach((item, index) => {
+    yAxisScales.forEach((item, index) => {
       item.textContent = this.dateConverter.formatforScale()[index];
     });
   }
@@ -56,7 +56,7 @@ export default class Statistics {
   }
 
   renderScaleValue() {
-    scaleValue.forEach((item, index) => {
+    scaleValues.forEach((item, index) => {
       return (item.textContent = this._countArticlesPerDay()[index],
         scalevalueItems[index].setAttribute('style', `width: ${this._countArticlesPerDay()[index]}%`))
     });

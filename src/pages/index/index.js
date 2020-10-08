@@ -1,6 +1,6 @@
 import "./index.css";
 
-import {BASE_URL, SEARCH_SETTINGS, newsCardContainer, preloader, searchForm, searchButton, errorMessage, ERROR_TEXT, showMorehButton, errorSection} from "../../js/constants/constants";
+import {BASE_URL, SEARCH_SETTINGS, newsCardContainer, preloader, searchForm, searchButton, errorMessage, ERROR_TEXT, showMorehButton, errorSection, newsSection} from "../../js/constants/constants";
 
 import DateTransformation from "../../js/components/DateTransformation";
 import NewsApi from "../../js/modules/NewsApi";
@@ -15,6 +15,7 @@ const newNewsCard = (sourceLink, title, date, description, image, source) => new
 const newsCardList = new NewsCardList(newsCardContainer, newNewsCard, daysCounter, dataStorage);
 
 const dataTransfer = (data, searchQuery) => {
+  dataStorage.clearDataStorage();
   dataStorage.addPartOfFullStorageToAddCards(data.articles); 
   dataStorage.addNewsData(data.articles);
   dataStorage.addTotalNumberOfArticles(data.totalResults);
@@ -24,7 +25,7 @@ const dataTransfer = (data, searchQuery) => {
 const onFormSubmit = (searchQuery) => {
   newsCardList.clearNewsCardList(); // Очищаем список карточек
   dataStorage.clearDataStorage(); // Очищаем localStorage
-  searchInput.reset(); // Сброс формы и блок кнопки
+  searchInput.reset(); // Блок кнопки
 
   preloader.classList.remove('preloader_hidden'); // Появляется прелоадер
   const newsApi = new NewsApi(BASE_URL, SEARCH_SETTINGS, daysCounter, searchQuery); // Отправляем запрос
@@ -55,3 +56,19 @@ const searchInput = new SearchInput(searchForm, onFormSubmit);
 showMorehButton.addEventListener('click', function(event) {
   newsCardList.addMoreCards()
 });
+
+// Прорисовка карточек после обновления страницы
+if (dataStorage.getNewsData() === null) {
+  searchInput.reset();
+} else {
+  newsSection.classList.remove('news_hidden');
+  searchForm.elements.query.value = dataStorage.getNewsRequestWord();
+
+  const cardsToRender = dataStorage.getNewsData().slice(0, dataStorage.numberOfCardsPerPage());
+  newsCardList.addCard(cardsToRender);
+
+  // Проверка на необходимость отображать кнопку "Показать ещё"
+  if (dataStorage.getNewsData().length - cardsToRender.length > 3) {
+    showMorehButton.classList.remove('button_show-more-hidden');
+  }
+}
