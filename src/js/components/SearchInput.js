@@ -38,7 +38,7 @@ export default class SearchInput {
   }
   
   reset() {
-    this.form.reset();
+    // this.form.reset();
     searchButton.setAttribute('disabled', '');
     searchButton.classList.add('button_search-disabled');   
   }

@@ -21,7 +21,7 @@ export default class CommitCardList {
 
   _commitsArrCheck(data) {
     let setOfRecentCommits = [];
-    if (data.length > 20) {
+    if (data.length > NUMBER_OF_COMMITS) {
       setOfRecentCommits = data.slice(0, data.lengt - NUMBER_OF_COMMITS); // Если коммитов было больше 20, то берём только последние 20
     } else {
       setOfRecentCommits = data; // Если меньше, то все
@@ -30,15 +30,15 @@ export default class CommitCardList {
   }
 
   _render(commitsArr) {
-    for (let i = 0; i < commitsArr.length; i++) {
-      const cardDate = this.dateConverter.formatForCard(commitsArr[i].commit.committer.date); // Преобразуем дату в нужный формат
-      const card = this.newCommitCard(commitsArr[i].commit.committer.name, 
-        commitsArr[i].commit.committer.email, 
+    commitsArr.forEach(item => {
+      const cardDate = this.dateConverter.formatForCard(item.commit.committer.date); // Преобразуем дату в нужный формат
+      const card = this.newCommitCard(item.commit.committer.name, 
+        item.commit.committer.email, 
         cardDate, 
-        commitsArr[i].commit.message,
-        commitsArr[i].author.avatar_url);
-      const commitCardElem =  card.create();
+        item.commit.message,
+        item.author.avatar_url);
+      const commitCardElem = card.create();
       this.container.append(commitCardElem);
-    }
+    })
   }
 }

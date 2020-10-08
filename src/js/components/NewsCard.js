@@ -6,22 +6,41 @@ export default class NewsCard {
     this.description = description;
     this.image = image;
     this.source = source;
-    this.element = null;
   }
 
   create() {
-    this.element = document.createElement('a');
-    this.element.classList.add('news__card-item');
-    this.element.setAttribute('href', `${this.sourceLink}`);
-    this.element.setAttribute('target','_blank');
+    const cardItem = document.createElement('a');
+    cardItem.classList.add('news__card-item');
+    cardItem.setAttribute('href', `${this.sourceLink}`);
+    cardItem.setAttribute('target','_blank');
 
-    const template = `<img class="news__card-image" src="${this.image}" alt="Иллюстрация к карточке">
-    <p class="news__card-date">${this.date}</p>
-    <h3 class="news__card-title">${this.title}</h3>
-    <blockquote class="news__card-text">${this.description}</blockquote>
-    <cite class="news__card-source">${this.source}</cite>`;
-    this.element.insertAdjacentHTML('beforeend', template);
+    const cardImage = document.createElement('img');
+    cardImage.classList.add('news__card-image');
+    cardImage.setAttribute('src', `${this.image}`);
+    cardImage.setAttribute('alt', 'Иллюстрация к карточке');
+
+    const cardDate = document.createElement('p');
+    cardDate.classList.add('news__card-date');
+    cardDate.textContent = this.date;
+
+    const cardTitle = document.createElement('h3');
+    cardTitle.classList.add('news__card-title');
+    cardTitle.textContent = this.title;
+
+    const cardDescription = document.createElement('blockquote');
+    cardDescription.classList.add('news__card-text');
+    cardDescription.textContent = this.description;
+
+    const cardSource = document.createElement('cite');
+    cardSource.classList.add('news__card-source');
+    cardSource.textContent = this.source;
+
+    cardItem.appendChild(cardImage);
+    cardItem.appendChild(cardDate);
+    cardItem.appendChild(cardTitle);
+    cardItem.appendChild(cardDescription);
+    cardItem.appendChild(cardSource);
     
-    return this.element;
+    return cardItem;
   }
 } 

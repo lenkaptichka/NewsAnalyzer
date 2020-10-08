@@ -1,3 +1,5 @@
+import {NUMBER_OF_CARDS} from "../constants/constants"
+
 export default  class DataStorage {
   addTotalNumberOfArticles(data) {
     localStorage.setItem('totalResults', JSON.stringify(data));
@@ -25,7 +27,7 @@ export default  class DataStorage {
 
   deleteThreeCardsFromStorage() {
     const cardsArr = this.getPartOfFullStorageToAddCards();
-    this.addPartOfFullStorageToAddCards((cardsArr.slice(3 - cardsArr.length)));
+    this.addPartOfFullStorageToAddCards((cardsArr.slice(NUMBER_OF_CARDS - cardsArr.length)));
   }
 
   addNewsRequestWord(word) {
@@ -38,6 +40,10 @@ export default  class DataStorage {
 
   clearDataStorage() {
     localStorage.clear();
+  }
+
+  numberOfCardsPerPage() {
+    return JSON.parse(localStorage.getItem('searhResults')).length - JSON.parse(localStorage.getItem('arrayToAddCards')).length;
   }
 }
  

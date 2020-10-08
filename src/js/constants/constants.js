@@ -4,9 +4,8 @@ export const AMOUNT_OF_DAYS = 6;
 export const NUMBER_OF_COMMITS = 20;
 
 export const URL_FOR_GITHUB_API = 'https://api.github.com/repos/lenkaptichka/NewsAnalyzer/commits';
-export const BASE_URL = 'https://newsapi.org/v2/everything';
+export const BASE_URL = NODE_ENV === 'development' ? 'http://newsapi.org/v2/everything' : 'https://nomoreparties.co/news/v2/everything';
 export const SEARCH_SETTINGS = 'language=ru&pageSize=100&sortBy=popularity&apiKey=e0da008a0d6646b5be1826bc9a93fda3';
-export const HELPER_PROXY = 'https://cors-anywhere.herokuapp.com/';
 
 export const  ERROR_TEXT = {
   'notFound': 'К сожалению по вашему запросу\nничего не найдено',
@@ -41,8 +40,8 @@ export const searchForm = document.forms.search;
 export const errorSection = document.querySelector('.no-result');
 export const preloader = document.querySelector('.preloader');
 export const numberOfArticles = document.querySelectorAll('.text_numbers');
-export const scaleValue = document.querySelectorAll('.scale__value');
-export const yAxisScale = document.querySelectorAll('.scale__y-axis-point');
+export const scaleValues = document.querySelectorAll('.scale__value');
+export const yAxisScales = document.querySelectorAll('.scale__y-axis-point');
 export const searchTitle = document.querySelector('.title_serch-info');
 export const scalevalueItems = [document.querySelector('.scale__value_first-value'), 
   document.querySelector('.scale__value_second-value'), 
